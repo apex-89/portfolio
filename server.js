@@ -1,7 +1,6 @@
-const express = require('express');
+const express = require("express");
 const path = require('path');
 const logger = require('morgan');
-// cross origin access 
 const cors = require('cors');
 
 
@@ -24,9 +23,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/test_route', (req, res) => {
     res.send("good route!")
-})
-
-
+});
 
 
 app.get('/*', (req, res) => {
